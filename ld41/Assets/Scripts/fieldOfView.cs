@@ -30,6 +30,8 @@ public class fieldOfView : MonoBehaviour {
 	public LayerMask obstacleMask;
 
 	public float meshResolution;
+	public int edgeResolveIterations;
+	public float edgeDstThreshold;
 
 	public MeshFilter viewMeshFilter;
 	Mesh viewMesh;
@@ -88,11 +90,26 @@ public class fieldOfView : MonoBehaviour {
 		float stepAngleSize = viewAngle / stepCount;
 
 		List<Vector3> viewPoints = new List<Vector3> ();
-
+		viewCastInfo oldViewCast = new viewCastInfo ();
 		for (int i = 0; i <= stepCount; i++) {
 			float angle = transform.eulerAngles.y - viewAngle / 2 + stepAngleSize * i;
 			viewCastInfo newViewCast = viewCast (angle);
+
+			if (i > 0) {
+				bool edgeDstThresholdExceeded = Mathf.Abs (oldViewCast.dst - newViewCast.dst) > edgeDstThreshold;
+				if (oldViewCast.hit != newViewCast.hit || (oldViewCast.hit && newViewCast.hit && edgeDstThresholdExceeded)) {
+					edgeInfo edge = FindEdge (oldViewCast, newViewCast);
+					if (edge.pointA != Vector3.zero) {
+						viewPoints.Add (edge.pointA);
+					}
+					if (edge.pointB != Vector3.zero) {
+						viewPoints.Add (edge.pointB);
+					}
+				}
+			}
+
 			viewPoints.Add (newViewCast.point);
+			oldViewCast = newViewCast;
 		}
 
 		int vertexCount = viewPoints.Count + 1;
@@ -114,6 +131,30 @@ public class fieldOfView : MonoBehaviour {
 		viewMesh.vertices = vertices;
 		viewMesh.triangles = triangles;
 		viewMesh.RecalculateNormals ();
+	}
+
+	edgeInfo FindEdge(viewCastInfo minViewCast, viewCastInfo maxViewCast) {
+		float minAngle = minViewCast.angle;
+		float maxAngle = maxViewCast.angle;
+		Vector3 minPoint = Vector3.zero;
+		Vector3 maxPoint = Vector3.zero;
+
+		for (int i = 0; i < edgeResolveIterations; i++) {
+			float angle = (minAngle + maxAngle) / 2;
+			viewCastInfo newViewCast = viewCast (angle);
+
+			bool edgeDstThresholdExceeded = Mathf.Abs (minViewCast.dst - newViewCast.dst) > edgeDstThreshold;
+			if (newViewCast.hit == minViewCast.hit && !edgeDstThresholdExceeded) {
+				minAngle = angle;
+				minPoint = newViewCast.point;
+			} else {
+				maxAngle = angle;
+				maxPoint = newViewCast.point;
+			}
+		}
+
+		return new edgeInfo (minPoint, maxPoint);
+
 	}
 
 	viewCastInfo viewCast (float globalAngle){
@@ -144,6 +185,16 @@ public class fieldOfView : MonoBehaviour {
 			point = _point;
 			dst = _dst;
 			angle = _angle;
+		}
+	}
+
+	public struct edgeInfo {
+		public Vector3 pointA;
+		public Vector3 pointB;
+
+		public edgeInfo(Vector3 _pointA, Vector3 _pointB) {
+			pointA = _pointA;
+			pointB = _pointB;
 		}
 	}
 

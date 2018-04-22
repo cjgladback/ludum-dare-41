@@ -51,7 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraCustom.cs" />
+     <Compile Include="Assets\Scripts\CameraCustom.cs" />
      <Compile Include="Assets\Scripts\dialogue\Dialogue.cs" />
      <Compile Include="Assets\Scripts\dialogue\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\dialogue\DialogueTrigger.cs" />
