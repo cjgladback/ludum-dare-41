@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\dialogue\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\dialogue\DialogueTrigger.cs" />
      <Compile Include="Assets\Scripts\fieldOfView.cs" />
+     <Compile Include="Assets\Scripts\fieldOfViewEditor.cs" />
      <Compile Include="Assets\Scripts\goatController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
