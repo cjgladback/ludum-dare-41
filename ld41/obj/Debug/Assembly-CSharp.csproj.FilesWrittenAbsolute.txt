@@ -50,3 +50,7 @@
 /Users/cjgladback/Desktop/ludum-dare-41/ld41/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
 /Users/cjgladback/Desktop/ludum-dare-41/ld41/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll
 /Users/cjgladback/Desktop/ludum-dare-41/ld41/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll.mdb
+/Users/cjgladback/Desktop/ludum-dare-41/ld41/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/cjgladback/Desktop/ludum-dare-41/ld41/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/cjgladback/Desktop/ludum-dare-41/ld41/obj/Debug/Assembly-CSharp.dll
+/Users/cjgladback/Desktop/ludum-dare-41/ld41/obj/Debug/Assembly-CSharp.dll.mdb

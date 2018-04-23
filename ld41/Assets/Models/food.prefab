@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65435072369118832}
   - component: {fileID: 23575937039524754}
   - component: {fileID: 54195822136631126}
-  - component: {fileID: 114470526977680210}
+  - component: {fileID: 114657236079528558}
   m_Layer: 0
   m_Name: food
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114470526977680210
+--- !u!114 &114657236079528558
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -120,6 +120,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1510917469616004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d5844c1250d43958e2512051437223, type: 3}
+  m_Script: {fileID: 11500000, guid: af00cc0ba00474e0f92f2ba0217b4653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carryFood: {fileID: 1892547545471784, guid: 1ca1f9297aa8a44dea234b8cd9e526d8, type: 2}
+  emptyhanded: 1

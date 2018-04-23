@@ -1,16 +1,21 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameUI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/trough.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/GameUI.cs" Line="41" Column="29" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="16" Column="18" />
       <File FileName="Assets/Scripts/fieldOfViewEditor.cs" Line="18" Column="3" />
-      <File FileName="Assets/Scripts/goatController.cs" Line="23" Column="19" />
-      <File FileName="Assets/Scripts/GameUI.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/goatController.cs" Line="27" Column="66" />
+      <File FileName="Assets/ObjectSpawner.cs" Line="19" Column="4" />
+      <File FileName="Assets/Scripts/objects/foodSpawner.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/objects/ObjectPooler.cs" Line="65" Column="3" />
+      <File FileName="Assets/foodInteraction.cs" Line="16" Column="20" />
+      <File FileName="Assets/trough.cs" Line="16" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <RunToCursorBreakpoint file="/Users/cjgladback/Desktop/ludum-dare-41/ld41/Assets/simplecamera.cs" line="19" column="67" />
+      <RunToCursorBreakpoint file="/Users/cjgladback/Desktop/ludum-dare-41/ld41/Assets/trough.cs" line="12" column="31" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

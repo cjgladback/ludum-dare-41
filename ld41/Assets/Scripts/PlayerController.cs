@@ -13,11 +13,11 @@ public class PlayerController : MonoBehaviour {
 	float smoothMoveVelocity;
 	Vector3 velocity;
 
-	Rigidbody rigidbody;
+	Rigidbody rgbody;
 	bool disabled;
 
 	void Start(){
-		rigidbody = GetComponent<Rigidbody> ();
+		rgbody = gameObject.GetComponent<Rigidbody>();
 		goatController.OnGoatSawYou += Disable;
 	}
 
@@ -41,8 +41,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		rigidbody.MoveRotation (Quaternion.Euler (Vector3.up * angle));
-		rigidbody.MovePosition (rigidbody.position + velocity * Time.deltaTime);
+		rgbody.MoveRotation (Quaternion.Euler (Vector3.up * angle));
+		rgbody.MovePosition (rgbody.position + velocity * Time.deltaTime);
 	}
 
 	void OnDestroy(){

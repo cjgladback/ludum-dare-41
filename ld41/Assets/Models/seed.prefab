@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 135116651959215146}
   - component: {fileID: 23893142306022992}
   m_Layer: 0
-  m_Name: weed
+  m_Name: seed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

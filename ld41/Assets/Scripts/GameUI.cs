@@ -21,6 +21,9 @@ public class GameUI : MonoBehaviour {
 				SceneManager.LoadScene (0);
 			}
 		}
+		if (trough.troughFull) {
+			ShowGameWinUI();
+		}
 		
 	}
 
@@ -35,5 +38,6 @@ public class GameUI : MonoBehaviour {
 		gameOverUI.SetActive (true);
 		gameIsOver = true;
 		goatController.OnGoatSawYou -= ShowGameLoseUI;
+		trough.troughFull = false;
 	}
 }
