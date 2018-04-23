@@ -1,4 +1,5 @@
-﻿//SmoothLookAt.cs
+﻿/*
+//SmoothLookAt.cs
 //Written by Jake Bayer
 //Written and uploaded November 18, 2012
 //This is a modified C# version of the SmoothLookAt JS script.  Use it the same way as the Javascript version.
@@ -72,4 +73,4 @@ public class CameraCustom : MonoBehaviour {
 			}
 		}
 	}
-}
+}*/

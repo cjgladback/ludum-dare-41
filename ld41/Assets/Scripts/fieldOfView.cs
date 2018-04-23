@@ -29,6 +29,9 @@ public class fieldOfView : MonoBehaviour {
 	public LayerMask targetMask;
 	public LayerMask obstacleMask;
 
+	public Transform player;
+	public bool canSee = false;
+
 	public float meshResolution;
 	public int edgeResolveIterations;
 	public float edgeDstThreshold;
@@ -58,6 +61,13 @@ public class fieldOfView : MonoBehaviour {
 
 		}
 
+	}
+
+	void Update(){
+		if (visibleTargets.Contains (player)) {
+			canSee = true;
+
+		}
 	}
 
 	void LateUpdate(){
