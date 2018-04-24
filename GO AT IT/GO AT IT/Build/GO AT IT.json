@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "ld41",
+"dataUrl": "GO AT IT.data.unityweb",
+"asmCodeUrl": "GO AT IT.asm.code.unityweb",
+"asmMemoryUrl": "GO AT IT.asm.memory.unityweb",
+"asmFrameworkUrl": "GO AT IT.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

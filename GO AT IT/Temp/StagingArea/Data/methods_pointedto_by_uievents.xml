@@ -1,0 +1,10 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="DialogueManager">
+			<method name="DisplayNextSentence"/>
+		</type>
+		<type fullname="DialogueTrigger">
+			<method name="TriggerDialogue"/>
+		</type>
+	</assembly>
+</linker>
